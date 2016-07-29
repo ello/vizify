@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'open-uri'
 require 'digest/md5'
 require 'logger'
 
