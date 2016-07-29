@@ -1,0 +1,10 @@
+language: ruby
+notifications:
+  email: false
+  slack:
+    rooms:
+      secure: uHWB+5/zxeKJplXQrRkYZEdd/upkD3nEg8djIObTU6AWh/qJ+mZCqf1Dc5SdBkOoLVAKXDjMc73CxurD8FHEq7BbMuAOGcGcOngxUBhF9PRl3rWSZEdo4HsJo6bUdWxuqZMao+F/zuqT9/Ox9A/13mL7aM6F31TQYBOfHRet81gOwuTQmJlYuad3GJijfuf+GLb/+lOaJ7dTYw/sTf+5uKhgTuuzwgXWs/TmZVYTfcqYemB49ZayXDhhEoqIEVgDmPixYiphZ49m7RrjWLdnmuKVY46kLM931y1HVXPwoC5x518X0JVYR4fDOQQHjdrgHZCfp6JnXQzC1wRVuugXz378lK2SWKjkXGSAu17xBg/u0D5QxJD/CiEXy007Y0Q3dEAABqCV3BuurUWBnlCSOGo2TwJVc7pfrJz9bpv1Vq0cif/bh3rrdC4ktuKMseELzX4bQBN5wAqgT0mnsdYmatOjoGWp+l4COnDDnq98pjh3fn36FGZaAT6igtBJhWJ3VKDbP4K4TOK04cjygZTZm0xSM6pi6XRpbH6S4OmI0IRqUsmGMGlo0pbhq0mrsI6uZr1snNTnHzHM3ggNHL3HQKCL6Ee59nXoMQa3uQLaFKMgQghCU/0WSXG2t2+/+zNYlLrgf8GA6XVcOLP16E1Xg5gyQzTuhLFde63lGvitpFM=
+addons:
+  apt:
+    packages:
+    - graphviz
