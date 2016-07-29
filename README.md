@@ -29,8 +29,13 @@ This is a vanilla Ruby/Sinatra application:
 * Run the test suite with `bundle exec rake`
 
 ##### Deployment, Operations, and Gotchas
-The service is packaged up with buildpacks that should allow it to be pushed
-directly to a Heroku application. Clone, push, and go!
+The service is packaged up with an Aptfile for [the APT buildpack](https://github.com/ddollar/heroku-buildpack-apt) that should allow it to be pushed directly to a Heroku application.
+
+After cloning this repo and creating your Heroku app, you'll need to add the APT buildpack to your configuration using the following:
+
+```
+$ heroku buildpacks:add https://github.com/ddollar/heroku-buildpack-apt.git
+```
 
 ## License
 Vizify is released under the [MIT License](blob/master/LICENSE.txt)
