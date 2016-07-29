@@ -13,11 +13,12 @@ class VizifyApp < Sinatra::Base
   end
 
   configure :production do
-    set :logging, Logger::INFO
+    set :logging, Logger.const_get(ENV['LOG_LEVEL'] || 'INFO')
   end
 
   helpers do
     def render_dot(code)
+      logger.debug "Rendering DOT: #{code}"
       digest = Digest::MD5.hexdigest(code)
       file = Tempfile.new([digest, '.svg'])
       begin
