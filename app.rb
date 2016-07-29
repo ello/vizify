@@ -37,17 +37,15 @@ class VizifyApp < Sinatra::Base
     end
   end
 
-  get '/' do
-    if params['url'] || params['dot']
-      code = if params[:url]
-              open(params[:url]).read
-            elsif params[:dot]
-              params[:dot]
-            end
-      content_type :svg
-      render_dot(code)
-    else
-      status 422
-    end
+  get '/dot' do
+    code = CGI.unescape(request.query_string).gsub('&', "\n")
+    content_type :svg
+    render_dot(code)
+  end
+
+  get '/url' do
+    code = open(params[:url]).read
+    content_type :svg
+    render_dot(code)
   end
 end

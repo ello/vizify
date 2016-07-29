@@ -9,14 +9,15 @@ READMEs. [Graphviz](http://www.graphviz.org/) is an awesome tool for that sort
 of thing, but it's always been a bit of a pain to actually get rendered graphs
 processed and linked in.
 
-This service lets you generate an SVG from a Graphviz source, passed either via
-a URL or as a string, e.g.
+This service exposes two endpoints, letting you generate an SVG from a Graphviz source passed either via a URL or as a string, e.g.
 
-`http://<your-service-hostname>/?url=<something>`
+`http://<your-service-hostname>/url?url=<some-url>`
 
 or
 
-`http://<your-service-hostname>/?dot=<contents of a DOT file>`
+`http://<your-service-hostname>/dot?<contents of a DOT file>`
+
+The second route uses a bit of a hack to tunnel the contents of the DOT file as a raw query string (cheers to [Gravizo](http://gravizo.com/) for the idea).
 
 
 ### Quickstart
